@@ -15,7 +15,7 @@ const client = new Discord.Client({
 })
 
 
-//create a random array of songs
+
 const songswarwick = [
     './Warwick.ogg',
     './Warwick2.ogg',
@@ -38,7 +38,7 @@ const pomosongs = [
 ]
 
 
-//play a song from player//play a song from player//
+
 client.on('messageCreate', async message => {
     if (message.content === '!warwick') {
         message.reply('Warwick is here!');
@@ -47,14 +47,14 @@ client.on('messageCreate', async message => {
             guildId: message.guild.id,
             adapterCreator: message.guild.voiceAdapterCreator,
         });
-        //play a random song from warwick array for 30 seconds in a loop
+        
         const resource = createAudioResource(songswarwick[Math.floor(Math.random() * songswarwick.length)]);
         player.play(resource);
         connection.subscribe(player);
 
     }
     }) 
-//disconnect from voice channel
+
 client.on('messageCreate', async message => {
     if (message.content === '!disconnect') {
         const connection = joinVoiceChannel({
@@ -66,12 +66,12 @@ client.on('messageCreate', async message => {
     }
  })
 
- //array between 60000 and 600000 with every number in between
+
     const yonerandint = Array.from({length: 60000}, (_, i) => i + 30000);
-    //random number from array
+   
     const yonerand = yonerandint[Math.floor(Math.random() * yonerandint.length)];
 
- //play a song in a loop for 30 seconds
+
 client.on('messageCreate', async message => {
     if (message.content === '!yone') {
         message.reply('Yone is here!');
@@ -117,7 +117,7 @@ client.on('messageCreate', async message => {
 
 
 
-//create a pomodoro timer
+
 client.on('messageCreate', async message => {
     if (message.content === '!pomodoro 20 5') {
         message.reply('Pomodoro timer started!');
@@ -126,12 +126,12 @@ client.on('messageCreate', async message => {
             guildId: message.guild.id,
             adapterCreator: message.guild.voiceAdapterCreator,
         });
-    //create a 25 minute timer and a 5 minute timer
+   
     var pomodoro = setInterval(pomodorointerval, 20000);
     var shortbreak = setInterval(shortbreakinterval, 5000);
-    //put the pomodoro timer in a loop
+  
 
-    //pomodorointerval function
+  
     function pomodorointerval()
     {
         const resource = createAudioResource(pomosongs[Math.floor(Math.random() * pomosongs.length)]);
@@ -141,7 +141,7 @@ client.on('messageCreate', async message => {
         clearInterval(pomodoro);
         clearInterval(shortbreak);
     }
-    //shortbreakinterval function
+   
     function shortbreakinterval()
     {
         const resource = createAudioResource(pomosongs[Math.floor(Math.random() * pomosongs.length)]);
