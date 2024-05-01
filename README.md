@@ -12,6 +12,7 @@ This is a Discord bot that comes with a Pomodoro timer that plays specific Leagu
 
 - `.yone`: Plays a Yone voice line from League of Legends.
 - `.warwick`: Plays a Warwick voice line from League of Legends.
+- `!pomodoro 20 5`: starts the pomodoro timer of 20 minutes with 5 minute breaks
 
 ## Installation
 
