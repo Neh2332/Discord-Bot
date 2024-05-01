@@ -1,17 +1,15 @@
-# 🎵 Discord Music Bot
+# 🎵 Discord Pomodoro Bot
 
 ## Description
 
-This is a Discord bot that allows users to play music directly from YouTube, SoundCloud, and Spotify. It was created to allow friends to play YouTube music in servers. The bot also comes with a Pomodoro timer that plays specific League of Legends voice lines.
+This is a Discord bot that comes with a Pomodoro timer that plays specific League of Legends voice lines, the league of legends voicelines was something I added for fun as the timer sound than a regular pomodoro timer sound effect.
 
 ## Features
-
-- **Music Playback**: Join a voice call and play audio when a user says ".play" followed by a YouTube, SoundCloud, or Spotify link.
+- **Audio Player**: Play a League of Legends Yone voice line
 - **Pomodoro Timer**: Play a League of Legends Yone voice line using ".yone", or a Warwick voice line using ".warwick".
 
 ## Commands
 
-- `.play [link]`: Plays the audio from the provided YouTube, SoundCloud, or Spotify link.
 - `.yone`: Plays a Yone voice line from League of Legends.
 - `.warwick`: Plays a Warwick voice line from League of Legends.
 
